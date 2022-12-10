@@ -2,7 +2,7 @@
 
 /**
  * main - Entry point
- * Return: 0 if output is correct
+ * Return: 0 if output is correctly
  */
 
 int main(void)
@@ -12,6 +12,6 @@ int main(void)
 	printf("size of a long int: %lu byte(s)\n", sizeof(long));
 	printf("size of a long long int: %lu byte(s)\n", sizeof(long long));
 	printf("size of a float: %ld byte(s)\n", sizeof(float));
-	
+
 	return (0);
 }
