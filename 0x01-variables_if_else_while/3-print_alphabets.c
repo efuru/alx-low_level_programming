@@ -8,7 +8,7 @@
  * Return: Always 0 (success)
  */
 
-int main (void)
+int main(void)
 {
 	int e, f;
 	
@@ -20,14 +20,13 @@ int main (void)
 		putchar(e);
 		e++;
 	}
-
-	while (f < 65)
+	
+	while (f < 91)
 	{
 		putchar(f);
 		f++;
 	}
-	
 	putchar(10);
-
+	
 	return (0);
 }
