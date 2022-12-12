@@ -5,9 +5,10 @@
 /**
  * main - determine if number is positive or nagative
  *
- * description: program will assign a random number to variable
+ * Description: program will assign a random number to variable n each time
+ * it is executed.
  *
- * return: Always 0 (success)
+ * Return: Always 0 (success)
  */
 
 
@@ -23,6 +24,5 @@ int main(void)
 		printf("%d is negative\n", n);
 	else
 		printf("%d is positive\n", n);
-
 	return (0);
 }
