@@ -11,7 +11,6 @@
 int main(void)
 {
 	int e, f;
-	
 	e = 97;
 	f = 65;
 
@@ -20,13 +19,11 @@ int main(void)
 		putchar(e);
 		e++;
 	}
-	
 	while (f < 91)
 	{
 		putchar(f);
 		f++;
 	}
 	putchar(10);
-	
 	return (0);
 }
