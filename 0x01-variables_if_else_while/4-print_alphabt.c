@@ -3,7 +3,7 @@
 /**
  * main -  program that prints the alphabet followed by new line
  *
- * Description: program that prints the alphabet in lowercase, followed by a new line.
+ * Description: program that prints the alphabet in lowercase.
  *
  * Return: Always 0 (success)
  */
@@ -11,7 +11,7 @@
 int main(void)
 {
 	int a = 97;
-	
+
 	while (a < 123)
 	{
 		if (a != 101 && a != 113)
