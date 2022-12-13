@@ -17,13 +17,13 @@ int main(void)
 
 	while (e < 58)
 	{
-		f = e +1;
-		while (f< 58)
+		f = e + 1;
+		while (f < 58)
 		{
 			putchar(e);
 			putchar(f);
 
-			if (e < 56 || f <57)
+			if (e < 56 || f < 57)
 			{
 				putchar(44);
 				putchar(32);
