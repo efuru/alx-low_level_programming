@@ -14,7 +14,7 @@ int main(void)
 
 	e = 0;
 
-	while (e <48)
+	while (e < 48)
 	{
 		if (e < 10)
 			putchar(e + '0');
