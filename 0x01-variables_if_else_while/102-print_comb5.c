@@ -10,39 +10,37 @@
 
 int main(void)
 {
-	int i, j, k, m;
+	int tens;
+	int ones;
+	int t;
+	int o;
 
-	i = 48;
-	while (i < 58)
+	for (tens = '0'; tens <= '9'; tens++) /*print first two digit combo*/
 	{
-		j = 48;
-		while (j < 58)
+		for (ones = '0'; ones <= '9'; ones++)
 		{
-			m = j + 1;
-			k = i;
-			while (k < 58)
+		 	for (t = tens; t <= '9'; t++) /*print second of pair*/
 			{
-				while (m < 58)
+				for (o = ones + 1; o <= '9'; o++)
 				{
-					putchar(i);
-					putchar(j);
-					putchar(32);
-					putchar(k);
-					putchar(m);
-					if (i < 57 || j < 56 || k < 57 || m < 57)
+					putchar(tens);
+					putchar(ones);
+					putchar(' ');
+					putchar(t);
+					putchar(o);
+
+					if (!((tens == '9' && ones == '8') &&
+					      (t == '9' && o == '9')))
 					{
-						putchar(44);
-						putchar(32);
+						putchar(',');
+						putchar(' ');
 					}
-					m++;
 				}
-				m = 48;
-				k++;
+				o = '0';
 			}
-			j++;
 		}
-		i++;
 	}
-	putchar(10);
+	putchar('\n');
+
 	return (0);
 }
