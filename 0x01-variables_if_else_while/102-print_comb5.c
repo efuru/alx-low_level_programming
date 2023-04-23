@@ -11,33 +11,33 @@
 
 int main(void)
 {
-	int abeb;
-	int babe;
-	int c;
-	int d;
+	int tens;
+	int ones;
+	int t;
+	int o;
 
-	for (abeb = '0'; abeb <= '9'; abeb++) /*print first two digit combo*/
+	for (tens = '0'; tens <= '9'; tens++) /*print first two digit combo*/
 	{
-		for (babe = '0'; babe <= '9'; babe++)
+		for (ones = '0'; ones <= '9'; ones++)
 		{
-			for (c = abeb; c <= '9'; c++) /*print second of pair*/
+			for (t = tens; t <= '9'; t++) /*print second of pair*/
 			{
-				for (d = babe + 1; d <= '9'; d++)
+				for (o = ones + 1; o <= '9'; o++)
 				{
-					putchar(abeb);
-					putchar(babe);
+					putchar(tens);
+					putchar(ones);
 					putchar(' ');
-					putchar(c);
-					putchar(d);
+					putchar(t);
+					putchar(o);
 
-					if (!((abeb == '9' && babe == '8') &&
-					      (c == '9' && d == '9')))
+					if (!((tens == '9' && ones == '8') &&
+					      (t == '9' && o == '9')))
 					{
 						putchar(',');
 						putchar(' ');
 					}
 				}
-				d = '0';
+				o = '0';
 			}
 		}
 	}
