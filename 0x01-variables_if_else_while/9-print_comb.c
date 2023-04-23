@@ -10,26 +10,22 @@
 
 int main(void)
 {
-	int e, f;
+	int e;
 
-	for (e = 0; e <= 10; e++)
+	e = 48;
+
+	while (e < 58)
 	{
-		for (f = e + 1; f <= 10; f++)
+		putchar(e);
+
+		if (e != 58)
 		{
-			putchar(e + '0');
-			putchar(f + '0');
-
-			if (e != 8 || f != 9)
-			{
-				putchar(',');
-				putchar(' ');
-			}
-
+			putchar(44);
+			putchar(32);
 		}
-
+		e++;
 	}
-
-	putchar('\n');
+	putchar(10);
 
 	return (0);
 }
