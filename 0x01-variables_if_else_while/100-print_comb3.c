@@ -19,7 +19,7 @@ int main(void)
 			putchar(e + '0');
 			putchar(f + '0');
 
-			if (e != 9 || f != 9)
+			if (e != 8 || f != 9)
 			{
 				putchar(44);
 				putchar(32);
