@@ -14,7 +14,10 @@ int main(void)
 
 	for (e = 0; e < 10; e++)
 	{
-		printf("%d\n", e);
+		printf("%d", e);
 	}
+
+	printf("\n");
+
 	return (0);
 }
