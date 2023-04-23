@@ -14,8 +14,6 @@ int main(void)
 	int e, f, j;
 
 	e = 48;
-	f = 48;
-	j = 48;
 
 	while (e < 58)
 	{
@@ -31,16 +29,16 @@ int main(void)
 				putchar(f);
 				putchar(j);
 
-				if (e != 55 || f != 56 || j != 57)
+				if (e < 55 || f < 56 || j < 57)
 				{
 					putchar(44);
 					putchar(32);
 				}
-				e++;
+				j++;
 			}
 			f++;
 		}
-		j++;
+		e++;
 	}
 	putchar(10);
 
