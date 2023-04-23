@@ -11,26 +11,26 @@
 
 int main(void)
 {
-	int a;
-	int b;
+	int abeb;
+	int babe;
 	int c;
 	int d;
 
-	for (a = '0'; a <= '9'; a++) /*print first two digit combo*/
+	for (abeb = '0'; abeb <= '9'; abeb++) /*print first two digit combo*/
 	{
-		for (b = '0'; b <= '9'; b++)
+		for (babe = '0'; babe <= '9'; babe++)
 		{
-			for (c = a; c <= '9'; c++) /*print second of pair*/
+			for (c = abeb; c <= '9'; c++) /*print second of pair*/
 			{
-				for (d = b + 1; d <= '9'; d++)
+				for (d = babe + 1; d <= '9'; d++)
 				{
-					putchar(a);
-					putchar(b);
+					putchar(abeb);
+					putchar(babe);
 					putchar(' ');
 					putchar(c);
 					putchar(d);
 
-					if (!((a == '9' && b == '8') &&
+					if (!((abeb == '9' && babe == '8') &&
 					      (c == '9' && d == '9')))
 					{
 						putchar(',');
