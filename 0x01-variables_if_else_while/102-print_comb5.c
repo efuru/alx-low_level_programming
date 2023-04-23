@@ -11,44 +11,37 @@
 
 int main(void)
 {
-	int e, f, g, h;
+	int a;
+	int b;
+	int c;
+	int d;
 
-	e = 48;
-
-	while (e < 58)
+	for (a = '0'; a <= '9'; a++) /*print first two digit combo*/
 	{
-		f = e + 1;
-
-		while (f < 58)
+		for (b = '0'; b <= '9'; b++)
 		{
-			g = f + 1;
-
-			while (g < 58)
+			for (c = a; c <= '9'; c++) /*print second of pair*/
 			{
-				h = g + 1;
-
-				while (h < 58)
+				for (d = b + 1; d <= '9'; d++)
 				{
-					putchar(e);
-					putchar(f);
-					putchar(32);
-					putchar(g);
-					putchar(h);
+					putchar(a);
+					putchar(b);
+					putchar(' ');
+					putchar(c);
+					putchar(d);
 
-					if (e < 57 || f < 56 || g < 57 || h < 57)
+					if (!((a == '9' && b == '8') &&
+					      (c == '9' && d == '9')))
 					{
-						putchar(44);
-						putchar(32);
+						putchar(',');
+						putchar(' ');
 					}
-					h++;
 				}
-				g++;
+				d = '0';
 			}
-			f++;
 		}
-		e++;
 	}
-	putchar(10);
+	putchar('\n');
 
 	return (0);
 }
