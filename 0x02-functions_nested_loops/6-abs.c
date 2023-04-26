@@ -13,7 +13,7 @@ int _abs(int e)
 {
 	if (e > 0)
 	{
-		_putchar('e');
+		_putchar(e);
 
 		return (e);
 	}
