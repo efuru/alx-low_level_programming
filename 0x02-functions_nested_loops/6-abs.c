@@ -3,26 +3,25 @@
 /**
  * _abs - Computes the absolut value of an integer
  *
- * @e: integer to be computed
+ * @n: integer to be computed
  *
  * Return: absolute value of an integer
  *
  */
 
-int _abs(int e)
-{
-	if (e > 0)
-	{
-		_putchar(e);
 
-		return (e);
-	}
-	else if (e < 0)
+int _abs(int n)
+{
+	if (n > 0)
 	{
-		return (-e);
+		return (n);
+	}
+	else if (n < 0)
+	{
+		return (-n);
 	}
 	else
 	{
-		return (e);
+		return (n);
 	}
 }
