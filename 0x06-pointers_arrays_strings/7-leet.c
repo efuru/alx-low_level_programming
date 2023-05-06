@@ -6,20 +6,20 @@
 
 char *leet(char *s)
 {
-	int i;
+	int g, h;
 
-	for (i = 0; s[i] != '\0'; i++)
+	char *i = "aAeEoOtTlL"; /*letters to be replaced*/
+	char *j = "4433007711"; /*numbers replacing letters*/
+
+	for (g = 0; s[g] != '\0'; g++)
 	{
-		if (s[i] == 'a' || s[i] == 'A')
-			s[i] = '4';
-		if (s[i] == 'e' || s[i] == 'E')
-			s[i] = '3';
-		if (s[i] == 'o' || s[i] == 'O')
-			s[i] = '0';
-		if (s[i] == 't' || s[i] == 'T')
-			s[i] = '7';
-		if (s[i] == 'l' || s[i] == 'L')
-			s[i] = '1';
+		for (h = 0; h < 10; h++) /* iterates through i & j */
+		{
+			if (s[g] == i[h]) /*checks if s[g] = a[h]*/
+			{
+				s[g] = j[h]; /*assigns new val */
+			}
+		}
 	}
 
 	return (s);
