@@ -16,7 +16,7 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 
 	while (a < n)
 	{
-		*(dest - a) = *(src - a); /*access a-th byte in dest & src*/
+		dest[a] = src[a]; /*access a-th byte in dest & src*/
 		a++; /*iterates from 0 - n*/
 
 	}

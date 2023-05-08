@@ -12,7 +12,7 @@
 
 char *_strchr(char *s, char c)
 {
-	while (*s != '\0')/*condition s to be less than null char*/
+	while (*s)
 	{
 		if (*s == c)/*checks if c is in s*/
 		{
@@ -22,5 +22,5 @@ char *_strchr(char *s, char c)
 		s++;
 	}
 
-	return (NULL);
+	return (!c ? s : NULL);
 }
