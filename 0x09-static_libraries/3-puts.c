@@ -1,14 +1,21 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * main - Entry point
- *
- * Description: Prints a string using the puts function
- *
- * Return: Always 0 (Success)
+ * _puts - prints a string to stdout
+ * @s: pointer to the string to print
  */
+void _puts(char *s)
+{
+	(void)s;
+}
+/**
+ * main - main entry
+ * @n: integer value
+ * Return: 0
+ */
+
 int main(void)
 {
-	puts("\"Programming is like building a multilingual puzzle");
-	return (0);
+	int n = 0;
+	return(0);
 }
