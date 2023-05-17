@@ -13,13 +13,13 @@ char *create_array(unsigned int size, char c)
 	char *pointer;/*pointer to first element in the array*/
 	unsigned int j;
 
-	/*allocate memory to pointer*/
-	pointer = (char *)malloc(size * sizeof(char));/*a char * total size*/
-
-	if (pointer == NULL)/*checks if pointer is null*/
-	{
+	if (size == 0)/*checks if size of array is null*/
 		return (NULL);
-	}
+
+	/*allocate memory to pointer*/
+	pointer = malloc(size * sizeof(char));/*a char * total size of char*/
+	if (pointer == NULL)
+		return (NULL);
 
 	/*iterate through each elements in total size using  j as an index*/
 	for (j = 0; j < size; j++)
