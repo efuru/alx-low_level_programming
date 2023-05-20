@@ -64,72 +64,52 @@ void validate_arguments(int argc, char *argv[])
 }
 
 /**
- * initialize_result - function initialize result
- * @len1: length of string
- * @len2: length of string two
- * Return: total length of both string
- */
-char *initialize_result(int len1, int len2)
-{
-	int len_result;
-	char *result;
-
-	len_result = len1 + len2;
-	result = calloc(len_result + 1, sizeof(char));
-	memset(result, '0', len_result);
-	return (result);
-}
-
-/**
  * long_multiplication - this function performs long multiplication
  * @num1: number to multiply
  * @num2: second number passed
- * @result: product to multiplication
  * Return: product of multiplication
  */
 
-void long_multiplication(char *num1, char *num2, char *result)
+char *long_multiplication(char *num1, char *num2)
 {
 	int len1, len2;
 	int i, prod;
 	int j, sum;
+	int len_result;
+	char *sult;
 
 	len1 = strlen(num1);
 	len2 = strlen(num2);
+	len_result = len1 + len2;
 
+	sult = calloc(len_result + 1, sizeof(char));
+	memset(sult, '0', len_result);/*alloc memory*/
+
+	/*reverse input strings*/
 	reverse(num1, len1);
 	reverse(num2, len2);
+
+	/*perform long mul*/
 	for (i = 0; i < len1; i++)
 	{
 		for (j = 0; j < len2; j++)
 		{
 			prod = (num1[i] - '0') * (num2[j] - '0');
-			sum = (result[i + j] - '0') + prod;
-			result[i + j] = (sum % 10) + '0';
-			result[i + j + 1] += sum / 10;
+			sum = (sult[i + j] - '0') + prod;
+			sult[i + j] = (sum % 10) + '0';
+			sult[i + j + 1] += sum / 10;
 		}
 	}
-	reverse(result, len1 + len2);
-}
+	reverse(sult, len1 + len2);/*reverse result of strings*/
 
-/**
- * format_result - Function to format the result
- * @result: pointer to result
- * Return: 0, result in increment
- */
-
-char *format_result(char *result)
-{
-	int len_result, i;
-
-	len_result = strlen(result);
 	i = 0;
-	while (i < len_result && result[i] == '0')
+	while (i < len_result && sult[i] == '0')
 		i++;
 	if (i == len_result)
 		return (0);
-	return (result + i);
+	return (sult + i);
 }
+
 /**
  * main - Main function
  * @argc: arguments count
@@ -140,19 +120,13 @@ char *format_result(char *result)
 int main(int argc, char *argv[])
 {
 	char *num1, *num2;
-	int len1, len2;
 	char *result;
-	char *formatted_result;
 
 	validate_arguments(argc, argv);
 	num1 = argv[1];
 	num2 = argv[2];
-	len1 = strlen(num1);
-	len2 = strlen(num2);
-	result = initialize_result(len1, len2);
-	long_multiplication(num1, num2, result);
-	formatted_result = format_result(result);
-	printf("%s\n", formatted_result);
+	result = long_multiplication(num1, num2);
+	printf("%s\n", result);
 	free(result);
 	return (0);
 }

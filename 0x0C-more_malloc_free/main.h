@@ -10,8 +10,6 @@ int _putchar(char c);
 int main(int argc, char *argv[]);
 void reverse(char *str, int len);
 void validate_arguments(int argc, char *argv[]);
-char *initialize_result(int len1, int len2);
-void long_multiplication(char *num1, char *num2, char *result);
-char *format_result(char *result);
+char *long_multiplication(char *num1, char *num2);
 
 #endif
