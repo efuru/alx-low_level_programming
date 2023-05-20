@@ -127,6 +127,5 @@ int main(int argc, char *argv[])
 	num2 = argv[2];
 	result = long_multiplication(num1, num2);
 	printf("%s\n", result);
-	free(result);
 	return (0);
 }
