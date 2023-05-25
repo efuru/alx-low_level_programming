@@ -1,7 +1,7 @@
 #include "dog.h"
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
+#include <stdlib.h>
 
 /**
  * new_dog - creates a new dog
@@ -12,6 +12,7 @@
  * Description: this function creates a new dog
  * Return: NULL if function fails
  */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *new_dog;
@@ -31,14 +32,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(new_dog);
 		return (NULL);
 	}
-	owner_copy = strdup(owner);
-	if (owner_copy == NULL)
+
+	owner_copy = strdup(owner);/*create copy of owner*/
+	if (owner_copy == NULL)/*checks if owner_copy is null*/
 	{
 		free(name_copy);
 		free(new_dog);
-		return (NULL);
+		return (NULL);/*executes these guys if owner_copy is null*/
 	}
-
 	new_dog->name = name_copy;
 	new_dog->age = age;
 	new_dog->owner = owner_copy;
