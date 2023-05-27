@@ -13,6 +13,6 @@
 void print_name(char *name, void (*f)(char *))
 {
 	/*check if name & f is not null & *name is != null terminator*/
-	if (name != NULL && *name != '\0' && f != NULL)
+	if (name != NULL && f != NULL)
 		f(name);/*call function pointer to by f with name argument*/
 }
