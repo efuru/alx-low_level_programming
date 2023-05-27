@@ -1,3 +1,4 @@
+#include <stddef.h>
 #include "function_pointers.h"
 #include <string.h>
 #include <stdio.h>
