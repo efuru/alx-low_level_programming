@@ -3,15 +3,16 @@
 #include <stdio.h>
 
 /**
- * print_name - this function prints name
- * @name: pointer to type char
- * @f: function pointer totghe function that prints name
+ * print_name - takes two arguemants, char poiter name & function pointer f
+ * @name: char pointer
+ * @f: points to a function that takes a char and returns nothin
  *
- * Resturn: Void
+ * Return: nothing
  */
 
 void print_name(char *name, void (*f)(char *))
 {
+	/*check if name & f is not null & *name is != null terminator*/
 	if (name != NULL && *name != '\0' && f != NULL)
-		f(name);
+		f(name);/*call function pointer to by f with name argument*/
 }
