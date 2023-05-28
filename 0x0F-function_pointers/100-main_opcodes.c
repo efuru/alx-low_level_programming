@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
 
 	for (i = 0; i < num_byt; i++)
 	{
-		printf("%o2x ", pointer[i]);/*for hex, for space*/
+		printf("%02x ", pointer[i]);/*for hex, for space*/
 	}
 	printf("\n");/*for new line*/
 	return (0);
